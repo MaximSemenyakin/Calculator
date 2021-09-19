@@ -1,14 +1,47 @@
 package com.example.calculator;
 
-public class CalculatorModel {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-    private double firstArg;
-    private double secondArg;
+public class CalculatorModel implements Parcelable {
+
+    private int firstArg;
+    private int secondArg;
 
     private State state;
     private int actionSelected;
 
     private StringBuilder strInput = new StringBuilder();
+
+    protected CalculatorModel(Parcel in) {
+        firstArg = in.readInt();
+        secondArg = in.readInt();
+        actionSelected = in.readInt();
+    }
+
+    public static final Creator<CalculatorModel> CREATOR = new Creator<CalculatorModel>() {
+        @Override
+        public CalculatorModel createFromParcel(Parcel in) {
+            return new CalculatorModel(in);
+        }
+
+        @Override
+        public CalculatorModel[] newArray(int size) {
+            return new CalculatorModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(firstArg);
+        dest.writeInt(secondArg);
+        dest.writeInt(actionSelected);
+    }
 
     private enum State {
         firstArgInput,
@@ -107,5 +140,20 @@ public class CalculatorModel {
         return strInput.toString();
     }
 
+    public void reset() {
+        state = State.firstArgInput;
+        strInput.setLength(0);
+    }
 
+    public StringBuilder getStrInput() {
+        return strInput;
+    }
+
+    public int getFirstArg() {
+        return firstArg;
+    }
+
+    public int getSecondArg() {
+        return secondArg;
+    }
 }
