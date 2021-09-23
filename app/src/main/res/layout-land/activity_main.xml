@@ -17,147 +17,100 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:paddingEnd="16dp"
+            android:paddingEnd="@dimen/padding_end_for_land_result_text_view"
             android:textColor="@color/white"
-            android:textSize="48sp"
+            android:textSize="@dimen/text_size_result_text_view"
             tools:text="324543" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/margin_for_land_grid_layout"
             android:columnCount="6"
-            android:paddingStart="24dp"
-            android:paddingEnd="10dp"
+            android:paddingStart="@dimen/padding_start_for_land_grid_layout"
+            android:paddingEnd="@dimen/padding_end_for_land_grid_layout"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_seven"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_7"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_seven"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_7" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_eight"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_8"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_eight"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_8"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_nine"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_9"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_nine"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_9"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_multiply"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/multiply"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
+                android:id="@+id/digit_button_multiply"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/multiply" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_division"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/division"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
+                android:id="@+id/digit_button_division"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/division"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_reset"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/reset"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_reset"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/reset" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_four"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_4"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_four"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_4" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_five"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_5"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_five"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_5"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_six"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_6"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_six"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_6"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_plural"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/addition"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
+                android:id="@+id/digit_button_plural"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/addition"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_minus"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/minus"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
+                android:id="@+id/digit_button_minus"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/minus"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_equals"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_operation"
-                android:text="@string/equals"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_equals"
+                style="@style/CalculatorButton.Operations"
+                android:text="@string/equals" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_first"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_1"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_first"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_second"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_2"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_second"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_three"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_3"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_three"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_zero"
-                android:layout_margin="8dp"
-                android:background="@drawable/button_for_numbers"
-                android:text="@string/number_0"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:id="@+id/digit_button_zero"
+                style="@style/CalculatorButton.Numbers"
+                android:text="@string/number_0"/>
 
         </GridLayout>
 

@@ -61,36 +61,36 @@ public class CalculatorModel implements Parcelable {
 
         if (strInput.length() < 9) {
             switch (numId) {
-                case R.id.button_zero:
+                case R.id.digit_button_zero:
                     if (strInput.length() != 0) {
                         strInput.append("0");
                     }
                     break;
-                case R.id.button_first:
+                case R.id.digit_button_first:
                     strInput.append("1");
                     break;
-                case R.id.button_second:
+                case R.id.digit_button_second:
                     strInput.append("2");
                     break;
-                case R.id.button_three:
+                case R.id.digit_button_three:
                     strInput.append("3");
                     break;
-                case R.id.button_four:
+                case R.id.digit_button_four:
                     strInput.append("4");
                     break;
-                case R.id.button_five:
+                case R.id.digit_button_five:
                     strInput.append("5");
                     break;
-                case R.id.button_six:
+                case R.id.digit_button_six:
                     strInput.append("6");
                     break;
-                case R.id.button_seven:
+                case R.id.digit_button_seven:
                     strInput.append("7");
                     break;
-                case R.id.button_eight:
+                case R.id.digit_button_eight:
                     strInput.append("8");
                     break;
-                case R.id.button_nine:
+                case R.id.digit_button_nine:
                     strInput.append("9");
                     break;
             }
@@ -98,21 +98,21 @@ public class CalculatorModel implements Parcelable {
     }
 
     public void onOperationPressed(int operationId) {
-        if (operationId == R.id.button_equals && state == State.secondArgInput) {
+        if (operationId == R.id.digit_button_equals && state == State.secondArgInput) {
             secondArg = Integer.parseInt(strInput.toString());
             state = State.resultShow;
             strInput.setLength(0);
             switch (actionSelected) {
-                case R.id.button_minus:
+                case R.id.digit_button_minus:
                     strInput.append(firstArg - secondArg);
                     break;
-                case R.id.button_plural:
+                case R.id.digit_button_plural:
                     strInput.append(firstArg + secondArg);
                     break;
-                case R.id.button_multiply:
+                case R.id.digit_button_multiply:
                     strInput.append(firstArg * secondArg);
                     break;
-                case R.id.button_division:
+                case R.id.digit_button_division:
                     strInput.append(firstArg / secondArg);
                     break;
             }
@@ -121,16 +121,16 @@ public class CalculatorModel implements Parcelable {
             state = State.secondArgInput;
             strInput.setLength(0);
             switch (operationId) {
-                case R.id.button_plural:
-                    actionSelected = R.id.button_plural;
+                case R.id.digit_button_plural:
+                    actionSelected = R.id.digit_button_plural;
                     break;
-                case R.id.button_multiply:
-                    actionSelected = R.id.button_multiply;
+                case R.id.digit_button_multiply:
+                    actionSelected = R.id.digit_button_multiply;
                     break;
-                case R.id.button_division:
-                    actionSelected = R.id.button_division;
-                case R.id.button_minus:
-                    actionSelected = R.id.button_minus;
+                case R.id.digit_button_division:
+                    actionSelected = R.id.digit_button_division;
+                case R.id.digit_button_minus:
+                    actionSelected = R.id.digit_button_minus;
                     break;
             }
         }
@@ -145,15 +145,4 @@ public class CalculatorModel implements Parcelable {
         strInput.setLength(0);
     }
 
-    public StringBuilder getStrInput() {
-        return strInput;
-    }
-
-    public int getFirstArg() {
-        return firstArg;
-    }
-
-    public int getSecondArg() {
-        return secondArg;
-    }
 }
