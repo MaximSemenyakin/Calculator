@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:paddingEnd="@dimen/padding_end_for_land_result_text_view"
+            android:paddingEnd="@dimen/default_padding"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_result_text_view"
             tools:text="324543" />
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_for_land_grid_layout"
+            android:layout_margin="@dimen/default_margin"
             android:columnCount="6"
             android:paddingStart="@dimen/padding_start_for_land_grid_layout"
             android:paddingEnd="@dimen/padding_end_for_land_grid_layout"

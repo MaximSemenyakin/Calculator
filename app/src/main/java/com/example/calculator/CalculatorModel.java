@@ -11,7 +11,7 @@ public class CalculatorModel implements Parcelable {
     private State state;
     private int actionSelected;
 
-    private StringBuilder strInput = new StringBuilder();
+    private final StringBuilder strInput = new StringBuilder();
 
     protected CalculatorModel(Parcel in) {
         firstArg = in.readInt();
