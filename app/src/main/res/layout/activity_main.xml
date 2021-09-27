@@ -9,6 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/settings_image_button"
+            android:layout_width="@dimen/width_image_button_settings"
+            android:layout_height="@dimen/height_image_button_settings"
+            android:background="@drawable/ic_action_name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:orientation="vertical">
 
