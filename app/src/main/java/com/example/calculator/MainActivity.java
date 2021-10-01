@@ -3,36 +3,47 @@ package com.example.calculator;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private CalculatorModel calculator = new CalculatorModel();
     private TextView inputTextView;
-    private Button buttonReset;
+    private ImageButton settingsImageButton;
+    private Button resetButton;
 
     private static final String FIRST_ARG = "first_arg";
+    SharedPreferences myPreferences;
+    public static final String MY_PREFERENCES = "my_settings";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        myPreferences = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        myPreferences.getBoolean(SettingsActivity.KEY_SWITCH_INDEX, false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        inputTextView = findViewById(R.id.result_show_text_view);
-        buttonReset = findViewById(R.id.digit_button_reset);
+
+        initViews();
 
         if (savedInstanceState != null && savedInstanceState.containsKey(FIRST_ARG)) {
             calculator = savedInstanceState.getParcelable(FIRST_ARG);
             inputTextView.setText(calculator.getText());
         }
 
+        settingsImageButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
         setTextCalculator();
 
-        buttonReset.setOnClickListener(v -> {
-            calculator.reset();
-            inputTextView.setText(calculator.getText()); });
+        clearTextView();
 
     }
 
@@ -53,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
             inputTextView.setText(calculator.getText());
         };
 
-        for (int i = 0; i < numberButtons.length; i++) {
-            findViewById(numberButtons[i]).setOnClickListener(numberButtonOnClick);
+        for (int numberButton : numberButtons) {
+            findViewById(numberButton).setOnClickListener(numberButtonOnClick);
         }
 
-        for (int i = 0; i < operationButtons.length; i++) {
-            findViewById(operationButtons[i]).setOnClickListener(operationButtonOnClick);
+        for (int operationButton : operationButtons) {
+            findViewById(operationButton).setOnClickListener(operationButtonOnClick);
         }
     }
 
@@ -82,5 +93,19 @@ public class MainActivity extends AppCompatActivity {
             R.id.digit_button_division,
             R.id.digit_button_equals
     };
+
+    public void initViews() {
+
+        inputTextView = findViewById(R.id.result_show_text_view);
+        resetButton = findViewById(R.id.digit_button_reset);
+        settingsImageButton = findViewById(R.id.settings_image_button);
+
+    }
+
+    public void clearTextView() {
+        resetButton.setOnClickListener(v -> {
+            calculator.reset();
+            inputTextView.setText(calculator.getText()); });
+    }
 
 }
