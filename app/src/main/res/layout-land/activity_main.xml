@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:paddingEnd="@dimen/padding_end_for_land_result_text_view"
+            android:paddingEnd="@dimen/default_padding"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_result_text_view"
             tools:text="324543" />
@@ -26,88 +26,88 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_for_land_grid_layout"
+            android:layout_margin="@dimen/default_margin"
             android:columnCount="6"
             android:paddingStart="@dimen/padding_start_for_land_grid_layout"
             android:paddingEnd="@dimen/padding_end_for_land_grid_layout"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_seven"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_7" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_eight"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_8"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_nine"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_9"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_multiply"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/multiply" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_division"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/division"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_reset"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/reset" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_four"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_4" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_five"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_5"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_six"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_6"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_plural"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/addition"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_minus"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/minus"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_equals"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/equals" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_first"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_1"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_second"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_2"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_three"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_3"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_zero"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_0"/>

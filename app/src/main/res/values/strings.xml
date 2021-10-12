@@ -16,4 +16,7 @@
     <string name="division">÷</string>
     <string name="addition">+</string>
     <string name="minus">-</string>
+    <string name="settings_activity">Settings</string>
+    <string name="text_view_dark_theme">Ночная тема</string>
+    <string name="back_to_main_activity">Вернуться обратно</string>
 </resources>

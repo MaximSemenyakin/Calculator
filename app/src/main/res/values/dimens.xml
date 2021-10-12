@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="text_size_for_button_number">24sp</dimen>
+    <dimen name="default_text_size">24sp</dimen>
     <dimen name="text_size_for_button_operation">28sp</dimen>
-    <dimen name="margin_for_buttons">8dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
 
     <dimen name="text_size_result_text_view">48sp</dimen>
     <dimen name="margin_bottom_result_text_view">12dp</dimen>
     <dimen name="padding_result_text_view">16dp</dimen>
 
-    <dimen name="margin_for_land_grid_layout">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
     <dimen name="padding_start_for_land_grid_layout">24dp</dimen>
     <dimen name="padding_end_for_land_grid_layout">10dp</dimen>
-    <dimen name="padding_end_for_land_result_text_view">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+
+    <dimen name="height_image_button_settings">55dp</dimen>
+    <dimen name="width_image_button_settings">55dp</dimen>
 
 </resources>

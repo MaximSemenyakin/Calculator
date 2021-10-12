@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_pic"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/dark_theme_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_dark_theme"
+            android:textSize="@dimen/default_text_size"
+            android:padding="@dimen/default_padding"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/control_dark_theme_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_half"
+            android:padding="@dimen/default_padding"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_main_activity"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/default_margin"/>
+
+</LinearLayout>

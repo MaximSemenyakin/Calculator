@@ -9,6 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/settings_image_button"
+            android:layout_width="@dimen/width_image_button_settings"
+            android:layout_height="@dimen/height_image_button_settings"
+            android:background="@drawable/ic_action_name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:orientation="vertical">
 
@@ -16,11 +29,11 @@
             android:id="@+id/result_show_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_bottom_result_text_view"
+            android:layout_marginBottom="12dp"
             android:gravity="end"
-            android:padding="@dimen/padding_result_text_view"
+            android:padding="16dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_result_text_view"
+            android:textSize="48sp"
             tools:text="324543" />
 
         <GridLayout
@@ -30,82 +43,82 @@
             android:orientation="vertical"
             android:rowCount="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_seven"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_7"/>
+                android:text="@string/number_7" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_four"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_4"/>
+                android:text="@string/number_4" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_first"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_1"/>
+                android:text="@string/number_1" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_zero"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_0"/>
+                android:text="@string/number_0" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_eight"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_8"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_five"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_5" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_second"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_2" />
+                android:text="@string/number_2"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_reset"
                 style="@style/CalculatorButton.Operations"
-                android:text="@string/reset" />
+                android:text="@string/reset"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_nine"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_9"/>
+                android:text="@string/number_9" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_six"
                 style="@style/CalculatorButton.Numbers"
-                android:text="@string/number_6"/>
+                android:text="@string/number_6" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_three"
                 style="@style/CalculatorButton.Numbers"
                 android:text="@string/number_3" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_equals"
                 style="@style/CalculatorButton.Operations"
-                android:text="@string/equals"/>
+                android:text="@string/equals" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_multiply"
                 style="@style/CalculatorButton.Operations"
-                android:text="@string/multiply"/>
+                android:text="@string/multiply" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_division"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/division"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_plural"
                 style="@style/CalculatorButton.Operations"
-                android:text="@string/addition" />
+                android:text="@string/addition"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/digit_button_minus"
                 style="@style/CalculatorButton.Operations"
                 android:text="@string/minus" />
